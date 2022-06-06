@@ -26,11 +26,17 @@ Example:
     
 describes a query that will search for password protected and not empty steam servers
 
-* After you created your SteamQueryParam list, you call the SteamServerQuery() function and pass your parameter list to it. This will return a list of steam servers that comply to your parameters
+* After you created your SteamQueryParam list, you call the SteamServerQuery() function and pass your parameter list to it. This will return the final string query that responds to the parameters. 
+
+Example:
+
+The above parameter list would return "\\secure\\1\\empty\\1"
+
+* Finally you can call the get_server_list function with your string query as parameter, and it will return a list of steam servers
 
 Logic Operators
 -------
-Each SteamQueryParam on your parameter list is implicitely connected with a logical AND. You can apply other logic operations by using the generate_logical_query function.
+Each SteamQueryParam on your parameter list is implicitely connected with a logical AND. You can apply other logic operations by using the generate_logical_query function. MSQP syntax for logic operators is like this : \\operator\\operandsCount\\param1\\param2
 
 Example:
 
@@ -39,7 +45,7 @@ Example:
   params = [SteamQueryParam.Secure,SteamQueryParam.NotEmpty]
   SteamQueryParam.generate_logical_query(Logical.OR,params)
   
-This will return a query that will return servers that are either password protected or not empty
+This will return a query that will return servers that are either password protected or not empty. The returning string query would be: "\\or\\2\\secure\\1\\empty\\1"
 
 The library supports the OR, AND, NOR, NAND operators
 
