@@ -1,6 +1,6 @@
 Simple-Steam-Queries
 =========
-A python module that allows you to easily run Steam client `Master Server Query Protocol <https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol>`_ queries
+A python module that allows you to easily run Steam client `Master Server Query Protocol <https://developer.valvesoftware.com/wiki/Master_Server_Query_Protocol>`_ queries and get a list of steam servers
 
 Install
 -------
