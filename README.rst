@@ -15,7 +15,7 @@ Usage Guide
 -------
 Steam server queries are being run through the steam client. Simple-Steam-Queries uses the `ValvePython steam <https://github.com/ValvePython/steam>`_ client module to execute the queries.
 
-* The first step is to login to the steam client by calling the sign_in function with a steam account's username and password credentials. If the account requires 2FA, it will be asked on the commandline. It's recomended to use a secrets.env file for this (`see example <https://github.com/gspentzas1991/GameSnoop-Server/blob/37d79c45328f36d9b70133b59a9999cacfbdbbf5/server.py#L187>`_)
+* The first step is to login to the steam client by calling the sign_in function with a steam account's username and password credentials. If the account requires 2FA, it will be asked on the command line. It's recomended to use a secrets.env file for this (`see example <https://github.com/gspentzas1991/GameSnoop-Server/blob/37d79c45328f36d9b70133b59a9999cacfbdbbf5/server.py#L187>`_)
 * In order to build your query, you need to create a list of SteamQueryParam objects. These objects describe the types of servers you want to receive with an implicit logical AND between the parameters
 
 Example:
