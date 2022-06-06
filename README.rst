@@ -26,7 +26,7 @@ Example:
     
 describes a query that will search for password protected and not empty steam servers
 
-* After you created your SteamQueryParam list, you call the SteamServerQuery() function and pass your parameter list to it. This will return the final string query that responds to the parameters. 
+* After you created your SteamQueryParam list, you call the SteamServerQuery function and pass your parameter list to it. This will return the final string query that corresponds to the parameters. 
 
 Example:
 
