@@ -30,9 +30,21 @@ describes a query that will search for password protected and not empty steam se
 
 Example:
 
-The above parameter list would return "\\secure\\1\\empty\\1"
+.. code:: python
+
+    params = [SteamQueryParam.Secure,SteamQueryParam.NotEmpty] 
+    query = SteamServerQuery(params).get_query()
+    #query will have the value "\secure\1\empty\1"
 
 * Finally you can call the get_server_list function with your string query as parameter, and it will return a list of steam servers
+
+Example:
+
+.. code:: python
+
+    params = [SteamQueryParam.Secure,SteamQueryParam.NotEmpty] 
+    query = SteamServerQuery(params).get_query()
+    game_servers = get_server_list(query)
 
 Logic Operators
 -------
