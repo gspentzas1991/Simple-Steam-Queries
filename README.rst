@@ -61,6 +61,18 @@ This will return a query that will return servers that are either password prote
 
 The library supports the OR, AND, NOR, NAND operators
 
+Aditional Parameters
+-------
+Some SteamQueryParams should be used with additional parameters. In such cases there are get functions that accept parameters, to create the query.
+
+Example:
+
+.. code:: python
+
+    params = [SteamQueryParam.get_appId_param(1604030),SteamQueryParam.get_servername_param('myServer'),SteamQueryParam.get_gametype_param('pvp')]
+    #The above parameters describe a query that searches for servers with appId=1604030, name like \*myServer\* and gametype of 'pvp'
+
+
 Notes
 -------
 Steam queries seem to return a maximum of 20k servers per request. If you need bigger results you will need to break the query into multiple smaller queries and collect the results together (`see example <https://github.com/gspentzas1991/GameSnoop-Server/blob/37d79c45328f36d9b70133b59a9999cacfbdbbf5/server.py#L117>`_)
